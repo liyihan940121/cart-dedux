@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Cart  from "./components/Cart";
-import Products  from "./components/Products";
+import Cart  from "./containers/CartContainer";
+import Products  from "./containers/ProductsContainer";
 
 class App extends Component {
   render () {
