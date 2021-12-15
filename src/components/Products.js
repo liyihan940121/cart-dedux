@@ -9,21 +9,25 @@ class Products extends Component {
   }
 
   render () {
-    const { products } = this.props
-    console.log(products,"products")
-    console.log(this.props,"this.props")
+    const { products, addToCart} = this.props
     return (
       <div>
         <h2>Products</h2>
-        {/* <ul>
+        <ul>
           {
             products.map(item => {
               return(
-                <li key={item}>{item}</li>
+                <li key={item.id}>
+                  {item.title} - {item.price} * {item.inventory}
+                  <br />
+                  <button 
+                    disabled = {!item.inventory}
+                    onClick={() => addToCart(item)}>{item.inventory ? 'add to cart':'sold out'}</button>
+                </li>
               )
             })
           }
-        </ul> */}
+        </ul>
       </div>
     )
   }

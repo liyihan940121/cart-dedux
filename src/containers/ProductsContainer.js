@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Products from '../components/Products'
-import { getAllProducts } from '../actions'
+import { getAllProducts, addToCart } from '../actions'
 
 function mapStatusToProps(state) {
   return {
@@ -19,15 +19,16 @@ function mapStatusToProps(state) {
 // }
 
 const mapDispatchToProps = {
-  getAllProducts
+  getAllProducts,
+  addToCart
 }
 
 const ProductsContainer = connect(
   mapStatusToProps,
-  {
-    getAllProducts
-  }
-  // mapDispatchToProps 可以是方法或对象
+  // {
+  //   getAllProducts
+  // }
+  mapDispatchToProps //可以是方法或对象
 )(Products)
 
 export default ProductsContainer 
