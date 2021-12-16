@@ -32,6 +32,8 @@ const items = (state = initialState.items, action) => {
 }
 
 export default (state = initialState, action) => {
+  console.log(action,"action")
+  console.log(state.checkoutStatus,"state")
   switch(action.type) {
     case types.SET_CHECKOUT_STATUS:
       return {

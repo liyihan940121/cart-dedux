@@ -21,17 +21,14 @@ const getTotalPrict = state => {
 }
 
 function mapStatusToProps(state) {
+  console.log(state,"state")
  return{
    cartProducts: getCartProducts(state),
-   totalPrice:getTotalPrict(state)
+   totalPrice:getTotalPrict(state),
+   checkoutStatus: state.cart.checkoutStatus
  }
 }
 
-// function mapDispatchToProps(dispath) {
-//   return {
-
-//   }
-// }
 const mapDispatchToProps = {
   checkout
 }

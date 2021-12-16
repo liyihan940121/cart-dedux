@@ -4,6 +4,7 @@ class Cart extends Component {
   render () {
     const { cartProducts, totalPrice, checkout, checkoutStatus } = this.props
     console.log(checkoutStatus,"checkoutStatus")
+    console.log(this.props,"this.props")
     return (
       <div>
         <h2>Cart</h2>
